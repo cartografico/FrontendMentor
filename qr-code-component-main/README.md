@@ -10,20 +10,14 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+  - 
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-
 
 ## Overview
 
 ### Screenshot
 
 ![](/home/alteralus/Pictures/Screenshots/QR%20Code.png)
-
-
 
 ### Links
 
@@ -46,16 +40,11 @@ Normally, I would use Flexbox for this type of project because it is easier, but
       position: absolute;
       inset: 0;
       margin: auto;
-
 ```
-
-
 
 ## Author
 
 - Website - [Cartografico](https://cartografico.github.io)
 - Frontend Mentor - [@Cartografico]((https://www.frontendmentor.io/profile/cartografico)
-  
-  
 
 # 
