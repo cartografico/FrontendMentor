@@ -34,8 +34,10 @@
       } */
       body {
         font-family: "Red Hat Display", sans-serif;
-        background: url(images/pattern-background-desktop.svg) no-repeat;
+        background: url(images/pattern-background-desktop.svg) no-repeat center
+          20%;
         background-color: var(--pale-blue);
+        margin: 0;
       }
 
       :root {
@@ -53,12 +55,14 @@
         margin: auto;
         width: fit-content;
         height: auto;
-        max-height: fit-content;
-        max-width: 27%;
-        max-height: 80%;
+        min-width: 350px;
+        max-width: 28%;
+        min-height: 550px;
+        max-height: 85%;
         border-radius: 15px;
         overflow: hidden;
-        box-shadow: 0px 20px 50px 15px rgba(76, 69, 96, 0.1);
+        box-shadow: 0px 30px 20px -5px rgba(95, 42, 243, 0.1);
+        z-index: 100;
       }
 
       .card__image {
@@ -149,10 +153,11 @@
         max-height: 40px;
         color: white;
         font-size: 12px;
-        font-weight: 900;
+        font-weight: 700;
         padding: 1px 20px;
         margin-top: 25px;
         border-radius: 10px;
+        box-shadow: 0px 15px 18px -5px rgba(97, 57, 208, 0.3);
       }
       .paymentButton:hover {
         cursor: pointer;
@@ -167,6 +172,14 @@
       }
       .cancelButton:hover {
         cursor: pointer;
+      }
+      @media screen and (max-width: 375px) {
+        .card {
+          width: 90%;
+          max-width: 90%;
+          min-height: 300px;
+          min-height: 300px;
+        }
       }
     </style>
   </head>
@@ -199,12 +212,5 @@
         </button>
       </div>
     </div>
-    <!-- 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
   </body>
 </html>
