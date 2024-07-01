@@ -1,37 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      /* .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      } */
+      /* @font-face {
+        font-family: "Red Hat Display", sans-serif;
+        src: url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+      } */
+      body {
+        font-family: "Red Hat Display", sans-serif;
+        background: url(images/pattern-background-desktop.svg) no-repeat;
+        background-color: var(--pale-blue);
+      }
 
-  Order Summary
+      :root {
+        --pale-blue: hsl(225, 100%, 94%);
+        --bright-blue: hsl(245, 75%, 52%);
+        --very-pale-blue: hsl(225, 100%, 98%);
+        --desaturated-blue: hsl(224, 23%, 55%);
+        --dark-blue: hsl(223, 47%, 23%);
+      }
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+      .card {
+        background-color: white;
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: fit-content;
+        height: auto;
+        max-height: fit-content;
+        max-width: 27%;
+        max-height: 80%;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0px 20px 50px 15px rgba(76, 69, 96, 0.1);
+      }
 
-  Annual Plan
-  $59.99/year
+      .card__image {
+        position: relative;
+        max-height: 30%;
+        min-width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .card__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 50px;
+      }
 
-  Change
+      .card__title {
+        font-size: 22px;
+        font-weight: 900;
+        color: var(--dark-blue);
+      }
+      .card__paragraph {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--desaturated-blue);
+        margin-top: -3px;
+        line-height: 1.3rem;
+      }
+      .plan {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: var(--very-pale-blue);
+        border-radius: 15px;
+        height: 100px;
+        min-width: 100%;
+        max-height: 80px;
+        padding: 0px 10px;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+      .plan__icon {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+      .plan__textContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .plan__name {
+        margin: 3px;
+        font-size: 14px;
+        font-weight: 900;
+        color: var(--dark-blue);
+      }
+      .plan__price {
+        margin: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--desaturated-blue);
+      }
+
+      .plan__change {
+        width: auto;
+        margin-left: 25%;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: underline;
+        color: var(--bright-blue);
+      }
+      .plan__change:hover {
+        cursor: pointer;
+      }
+
+      .paymentButton {
+        all: unset;
+        appearance: none;
+        border: 0;
+        background-color: var(--bright-blue);
+        width: 90%;
+        height: fit-content;
+        max-height: 40px;
+        color: white;
+        font-size: 12px;
+        font-weight: 900;
+        padding: 1px 20px;
+        margin-top: 25px;
+        border-radius: 10px;
+      }
+      .paymentButton:hover {
+        cursor: pointer;
+      }
+
+      .cancelButton {
+        all: unset;
+        color: var(--desaturated-blue);
+        font-size: 12px;
+        font-weight: 900;
+        margin-top: 10px;
+      }
+      .cancelButton:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="images/illustration-hero.svg" alt="" class="card__image" />
+      <div class="card__content">
+        <h1 class="card__title">Order Summary</h1>
+        <p class="card__paragraph">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <div class="plan">
+          <img
+            src="images/icon-music.svg"
+            alt="music icon"
+            class="plan__icon"
+          />
+          <div class="plan__textContainer">
+            <p class="plan__name">Annual Plan</p>
+            <p class="plan__price">$59.99/year</p>
+          </div>
+          <p class="plan__change">Change</p>
+        </div>
+        <button class="paymentButton">
+          <p class="paymentButton__text">Proceed to Payment</p>
+        </button>
+        <button class="cancelButton">
+          <p class="cancelButton__text">Cancel Order</p>
+        </button>
+      </div>
+    </div>
+    <!-- 
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
 </html>
