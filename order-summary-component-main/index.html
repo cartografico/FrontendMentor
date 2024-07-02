@@ -58,7 +58,7 @@
         min-width: 350px;
         max-width: 28%;
         min-height: 550px;
-        max-height: 85%;
+        max-height: 80%;
         border-radius: 15px;
         overflow: hidden;
         box-shadow: 0px 30px 20px -5px rgba(95, 42, 243, 0.1);
@@ -173,13 +173,29 @@
       .cancelButton:hover {
         cursor: pointer;
       }
-      @media screen and (max-width: 375px) {
+
+      @media screen and (max-width: 480px) {
         .card {
-          width: 90%;
-          max-width: 90%;
-          min-height: 300px;
-          min-height: 300px;
+          width: 85vw;
+          height: auto;
+          max-height: 50vh;
         }
+
+        /* .card__content {
+          padding: 10px 20px;
+        }
+
+        .card__title {
+          font-size: 20px;
+        }
+
+        .card__paragraph {
+          font-size: 13px;
+        }
+
+        .plan {
+          padding: 0px 5px;
+        } */
       }
     </style>
   </head>
