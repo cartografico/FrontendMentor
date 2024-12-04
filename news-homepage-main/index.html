@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <!-- displays site properly based on user's device -->
-    <link rel="stylesheet" href="style.css" />
     <!-- <link rel="stylesheet" href="reset.css" /> -->
     <link
       rel="icon"
@@ -25,7 +25,15 @@
           <img src="assets/images/logo.svg" alt="site logo" />
         </div>
         <div class="nav">
+          <button class="hamburger" >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <ul class="nav-menu">
+              <button class="btn-close">
+                <p>X</p>
+              </button>
             <li class="menu-item"> <a href="">Home</a></li>
             <li class="menu-item"><a href="">New</a></li>
             <li class="menu-item"><a href="">Popular</a></li>
@@ -37,7 +45,8 @@
       <div class="content-wrapper">
         <div class="main-content">
           <div class="slide-container">
-            <img src="assets/images/image-web-3-desktop.jpg" alt="" />
+            <source srcset="assets/image/image-web-3-mobile.jpg" media = "screen and (max-width:768px)">
+            <img src="assets/images/image-web-3-desktop.jpg "  alt="slider" />
           </div>
           <div class="article-container">
             <div class="article-container--title">
@@ -137,4 +146,5 @@
       </div>
     </div>
   </body>
+  <script src="scripts.js"></script>
 </html>
